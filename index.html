@@ -7,10 +7,9 @@
   <title>Landing Productos Médicos</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="./imagen/logo.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="./imagen/logo_.png" type="image/x-icon">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./estilos/medical.css">
+  <link rel="stylesheet" href="./estilos/medical.css?v=1.2">
 </head>
 
 <body>
@@ -18,24 +17,31 @@
   <!-- ================= HEADER ================= -->
   <header class="header">
     <div class="container header-container">
-      <div class="logo">
-        <img src="./imagen/logo.jpg" alt="Logo empresa médica">
-      </div>
+      <a href="/" class="logo" aria-label="Ir al inicio">
+        <img src="./imagen/logo_.png" alt="Medical Store Logo">
+      </a>
 
-      <nav class="nav">
-        <a href="./vistas/galeria.html">Galería</a>
-        <a href="#productos">Productos</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#contacto" class="btn btn-primary">Contacto</a>
+      <div class="nav-overlay"></div>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="./vistas/galeria.html">Galería</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#contacto" class="btn btn-primary">Contacto</a></li>
+        </ul>
       </nav>
+
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <!-- Espaciador para header fijo -->
-  <div class="spacer"></div>
+  <!-- Espaciador removido: el body ya compensa el header fijo -->
 
   <main>
-
     <!-- ================= HERO ================= -->
     <section class="hero container">
       <div class="hero-content">
@@ -129,22 +135,30 @@
     <!-- ================= CTA / CONTACTO ================= -->
     <section id="contacto" class="section container">
       <div class="cta">
-        <div>
+        <div class="cta-content">
           <h2>¿Necesitas una cotización?</h2>
           <p>Contáctanos y te asesoramos con la mejor solución para tu institución médica.</p>
           <a href="#" class="btn btn-primary">Solicitar información</a>
         </div>
 
         <div class="cta-box">
-          <form>
-            <label for="name">Nombre</label>
-            <input id="name" type="text" placeholder="Nombre" required>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input id="name" type="text" placeholder="Tu nombre completo" required>
+            </div>
 
-            <label for="phone">Teléfono</label>
-            <input id="phone" type="tel" placeholder="Teléfono" required>
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input id="phone" type="tel" placeholder="Ej: +52 123 456 7890" required>
+            </div>
 
-            <label for="address">Dirección</label>
-            <input id="address" type="text" placeholder="Dirección">
+            <div class="form-group">
+              <label for="address">Dirección</label>
+              <input id="address" type="text" placeholder="Dirección de entrega o institución">
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">Enviar Solicitud</button>
           </form>
         </div>
       </div>
@@ -155,22 +169,32 @@
   <!-- ================= FOOTER ================= -->
   <footer>
     <div class="container footer-container">
-      <div>
+      <div class="footer-brand">
         <div class="footer-logo">
-          <img src="./imagen/logo.jpg" alt="Logo empresa médica">
+          <img src="./imagen/logo_.png" alt="Logo empresa médica">
         </div>
-        <p>Proveedor de insumos médicos para clínicas y hospitales.</p>
+        <p>Proveedor líder de insumos médicos de alta calidad para clínicas, hospitales y distribuidores autorizados.
+        </p>
       </div>
 
-      <div>
+      <div class="footer-info">
         <h4>Contacto</h4>
-        <p>Teléfono: ________</p>
-        <p>Email: ________</p>
+        <p><strong>Teléfono:</strong> +52 123 456 7890</p>
+        <p><strong>Email:</strong> contacto@medicalstore.com</p>
+        <p><strong>Horario:</strong> Lun - Vie: 9am - 6pm</p>
       </div>
 
-      <div>
+      <div class="footer-info">
         <h4>Ubicación</h4>
-        <p>Dirección: ________</p>
+        <p>Av. Principal #123, Col. Centro</p>
+        <p>Ciudad de México, CP 01000</p>
+        <p>México</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Medical Store. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
