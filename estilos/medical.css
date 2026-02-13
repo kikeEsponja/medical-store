@@ -158,9 +158,11 @@ header {
 }
 
 .nav-list a:hover {
-  color: #fff;
+  color: var(--primary);
 }
-
+.nav-list .contacto:hover {
+  color: var(--text);
+}
 /* Menú móvil */
 .menu-toggle {
   display: none;
