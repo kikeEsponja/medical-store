@@ -87,6 +87,7 @@ p {
 .btn:hover {
   transform: translateY(-2px);
   filter: brightness(1.1);
+  color: #fff;
 }
 
 .btn-primary {
@@ -153,7 +154,7 @@ header {
 }
 
 .nav-list a:hover {
-  color: var(--primary);
+  color: #fff;
 }
 .nav-list .contacto:hover {
   color: var(--text);
