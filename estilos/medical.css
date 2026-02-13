@@ -158,7 +158,7 @@ header {
 }
 
 .nav-list a:hover {
-  color: var(--primary);
+  color: #fff;
 }
 
 /* Menú móvil */
